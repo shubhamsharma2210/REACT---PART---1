@@ -21,7 +21,7 @@ const passwordGerantor = useCallback(()=>{
   }
   setPassword(pass)
 
-}, [length,number,char,setPassword])
+}, [length,number,char,setPassword,setNumber,setChar])
 useEffect(()=>{
  passwordGerantor() 
 },[length,char,number,passwordGerantor])
@@ -64,7 +64,7 @@ const copyPasswordClip = useCallback(()=>{
               type='checkbox'
               defaultChecked = {number}
               id='numberInput'
-              onChange={(prev) => !prev}
+              onChange={() => setNumber(prev => !prev)}
             />
             <label htmlFor="numberInput">Numbers</label>
         </div>
@@ -73,7 +73,7 @@ const copyPasswordClip = useCallback(()=>{
               type='checkbox'
               defaultChecked = {char}
               id='charInput'
-              onChange={(prev) => !prev}
+              onChange={() => setChar(prev => !prev)}
             />
             <label htmlFor="charInput">Characters</label>
         </div>
