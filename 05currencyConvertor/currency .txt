@@ -1,0 +1,1 @@
+ const URL = https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/2023-12-20/currencies/eur.json
